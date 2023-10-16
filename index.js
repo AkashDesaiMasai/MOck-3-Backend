@@ -10,7 +10,12 @@ require("dotenv").config();
 const app = express();
 const PORT = `${process.env.PORT}` || 3000; // or another port above 1024
 
-app.use(cors());
+app.use(cors({
+  origin: `https://mock-3-frontend-pink.vercel.app/`,
+  methods: 'GET,POST,DELETE',  // Specify the allowed HTTP methods
+  allowedHeaders: 'Content-Type,Authorization',  // Specify the allowed headers
+  credentials: true,  // Allow credentials (cookies, etc.)
+}));
 
 app.use(express.json());
 
