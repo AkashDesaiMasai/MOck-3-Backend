@@ -11,10 +11,7 @@ const app = express();
 const PORT = `${process.env.PORT}` || 3000; // or another port above 1024
 
 app.use(cors());
-var corsOptions = {
-  origin: 'https://mock-3-frontend-pink.vercel.app',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
