@@ -1,7 +1,7 @@
 const express = require("express");
 const { connection } = require("./conn");
 const { UserModel } = require("./Model/user");
-const { EmployeeModel } = require("./Model/Employee");
+const { EmployeeModel } = require("./Model/employee");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
